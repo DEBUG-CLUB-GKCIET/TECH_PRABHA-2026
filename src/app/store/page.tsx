@@ -17,12 +17,9 @@ export default function StorePage() {
           Merchandise Terminal Offline
         </h2>
         <p className="text-gray-400 text-center max-w-lg text-sm md:text-base font-light">
-          The inventory system is currently undergoing an upgrade. Official T-shirts, hoodies, and exclusive digital assets will be available soon.
+          The inventory system is currently undergoing. Official T-shirts, hoodies, and exclusive digital assets will be available soon.
         </p>
         
-        <button className="mt-8 px-6 py-3 bg-transparent border border-[#ff00ff] text-[#ff00ff] rounded-full uppercase tracking-widest text-xs font-bold hover:bg-[#ff00ff] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(255,0,255,0.3)] hover:shadow-[0_0_30px_rgba(255,0,255,0.6)]">
-          Notify When Active
-        </button>
       </div>
     </PageLayout>
   );

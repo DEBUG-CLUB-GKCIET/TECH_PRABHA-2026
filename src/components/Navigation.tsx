@@ -92,13 +92,7 @@ const YoutubeIcon = ({ size, className, ...props }: IconProps) => (
 );
 
 const rightNavIcons = [
-  { Icon: InstagramIcon, href: "#" },
-  { Icon: LinkedinIcon, href: "#" },
-  { Icon: YoutubeIcon, href: "#" },
-  { Icon: XIcon, href: "#" },
-  { Icon: FacebookIcon, href: "#" },
-  { Icon: DiscordIcon, href: "#" },
-  { Icon: WhatsAppIcon, href: "#" },
+  { Icon: InstagramIcon, href: "https://www.instagram.com/techprabha.gkciet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
 ];
 
 const topNavLinks = ["ACCOMMODATION", "WORKSHOPS", "COMPETITIONS"];
@@ -113,22 +107,9 @@ export default function Navigation() {
         <div className="flex flex-row items-center gap-6 pointer-events-auto">
           {/* Replaced T-26 text with logos */}
           <Image src="/gkciet1.png" alt="GKCIET Logo" width={48} height={48} className="h-10 md:h-12 w-auto object-contain" />
-          <Image src="/debug.png" alt="Debug Logo" width={48} height={48} className="h-10 md:h-12 w-10 md:w-12 object-contain scale-125" />
+          <Image src="/techprabha.png" alt="Techprabha Logo" width={48} height={48} className="h-10 md:h-12 w-10 md:w-12 object-contain scale-125" />
         </div>
 
-        <div
-          className={`${chakraPetch.className} hidden lg:flex items-center gap-12 pointer-events-auto absolute left-1/2 -translate-x-1/2`}
-        >
-          {topNavLinks.map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-white hover:text-[#00f0ff] transition-all text-base tracking-[0.05em] uppercase drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] hover:drop-shadow-[0_0_12px_rgba(0,240,255,0.8)]"
-            >
-              {link}
-            </a>
-          ))}
-        </div>
 
         <div className="pointer-events-auto flex items-center gap-4">
           <div className="lg:hidden mt-1">
@@ -169,6 +150,7 @@ export default function Navigation() {
           <a
             key={index}
             href={item.href}
+            target="_blank"
             className="group flex flex-col items-center justify-center w-full py-2 hover:bg-white/[0.03] transition-all duration-300"
           >
             <item.Icon
@@ -192,7 +174,7 @@ export default function Navigation() {
             <div className="flex justify-between items-center mb-12">
               <div className="flex flex-row items-center gap-4">
                 <Image src="/gkciet1.png" alt="GKCIET Logo" width={32} height={32} className="h-8 w-auto object-contain" />
-                <Image src="/debug.png" alt="Debug Logo" width={32} height={32} className="h-8 w-8 object-contain scale-125" />
+                <Image src="/techprabha.png" alt="Techprabha Logo" width={32} height={32} className="h-8 w-8 object-contain scale-125" />
               </div>
               <Code
                 size={28}
@@ -211,16 +193,7 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <div className="h-[1px] w-full bg-white/10 my-4" />
-              {topNavLinks.map((link) => (
-                <div
-                  key={link}
-                  className={`${inter.className} text-sm tracking-[0.2em] text-gray-400 hover:text-white cursor-pointer transition-colors`}
-                >
-                  {link}
-                </div>
-              ))}
-            </div>
+              </div>
           </motion.div>
         )}
       </AnimatePresence>

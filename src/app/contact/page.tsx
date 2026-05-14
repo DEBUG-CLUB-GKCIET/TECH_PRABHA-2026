@@ -10,14 +10,14 @@ const teamData = [
         role: "LEAD ORGANISER",
         email: "243550110194@gkciet.ac.in",
         phone: "+91 7980101528",
-        image: "/akashp.jpeg"
+        image: "/profileImages/akash.png"
       },
       {
         name: "DIPAM PANDIT",
         role: "LEAD ORGANISER",
         email: "CSE, 2nd Year",
         phone: "dipam@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=12"
+        image: "/profileImages/dipam.png"
       }
     ]
   },
@@ -29,35 +29,35 @@ const teamData = [
         role: "CORE RESPONSIBILITY",
         email: "CSE, 2nd Year",
         phone: "dipam.f@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=13"
+        image: "/profileImages/dipam.png"
       },
       {
         name: "MUKTADI HASSAN",
         role: "CORE RESPONSIBILITY",
         email: "CSE, 2nd Year",
         phone: "muktadi@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=14"
+        image: "/profileImages/MuktadiHassan.png"
       },
       {
         name: "SANKALPA GHOSWAMI",
         role: "CORE RESPONSIBILITY",
         email: "FET, 2nd Year",
         phone: "sankalpa@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=15"
+        image: "/profileImages/nodp.png"
       },
       {
         name: "SHABA KHATOON",
         role: "CORE RESPONSIBILITY",
         email: "CSE, 2nd Year",
         phone: "shaba@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=5"
+        image: "/profileImages/nodp.png"
       },
       {
         name: "VICKY KUMAR SHAH",
         role: "CORE RESPONSIBILITY",
         email: "CSE, 2nd Year",
         phone: "vicky@techprabha.in",
-        image: "https://i.pravatar.cc/300?img=8"
+        image: "/profileImages/vickyshah.png"
       }
     ]
   }

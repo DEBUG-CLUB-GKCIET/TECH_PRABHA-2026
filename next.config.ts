@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "picsum.photos" },
     ],
   },
+  allowedDevOrigins: ['10.215.120.11'],
 };
 
 export default nextConfig;

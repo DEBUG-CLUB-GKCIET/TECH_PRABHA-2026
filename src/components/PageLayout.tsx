@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Inter, Syncopate } from "next/font/google";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 
 const SynthCanvas = dynamic(() => import("./SynthCanvas"), {
   ssr: false,
@@ -19,18 +19,21 @@ interface PageLayoutProps {
 }
 
 export default function PageLayout({ title, subtitle, children }: PageLayoutProps) {
-  const [canRenderCanvas] = useState(() => {
-    if (typeof document === "undefined") return false;
+  // 1. Initialize state to false so server and first client render match
+  const [canRenderCanvas, setCanRenderCanvas] = useState(false);
 
+  // 2. Run the WebGL check AFTER the component has safely mounted on the client
+  useEffect(() => {
     try {
       const canvas = document.createElement("canvas");
-      return Boolean(
+      const hasWebGL = Boolean(
         canvas.getContext("webgl") || canvas.getContext("experimental-webgl")
       );
+      setCanRenderCanvas(hasWebGL);
     } catch {
-      return false;
+      setCanRenderCanvas(false);
     }
-  });
+  }, []);
 
   return (
     <section className="relative w-full min-h-[100svh] overflow-x-hidden bg-[#030008] flex items-center justify-center pt-24 pb-12 px-6">
