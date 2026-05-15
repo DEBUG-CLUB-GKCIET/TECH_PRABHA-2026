@@ -50,6 +50,11 @@ export default function SciFiEventCard({ event, onRegisterClick }: Props) {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
               </div>
+            <div className={`${syncopate.className} flex justify-center items-center flex-col font-semibold`}>
+              <span>{event.date}</span>
+              <span>{event.day}</span>
+              <span>{event.time}</span>
+            </div>
               
             {/* Buttons Area */}
             <div className="flex w-full gap-3 justify-center mb-6 mt-4">
@@ -58,18 +63,22 @@ export default function SciFiEventCard({ event, onRegisterClick }: Props) {
                 className={`${syncopate.className} flex-1 inline-flex items-center justify-center w-full bg-[#0a101f] border-2 text-white text-[10px] md:text-xs font-bold py-2 transition-all duration-300 uppercase tracking-widest shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:bg-white hover:text-black group-hover:shadow-[0_0_20px_currentColor]`}
                 style={{ borderColor: event.color }}
               >
-                Explore and Register
+                {(event.registrationLinks || event.registrationUrl)? "Explore and Register" : "Explore"}
               </Link>
             </div>
 
+
             {/* Prize Pool Area */}
-            <div className="flex flex-col items-center justify-end">
+            <div className="flex flex-col items-center justify-end h-10">
+              {event.prizePool && <>
               <span className={`${spaceGrotesk.className} text-[10px] md:text-xs text-white/90 tracking-widest font-semibold uppercase`}>
                 Prize Pool:
               </span>
               <span className={`${spaceGrotesk.className} text-sm md:text-base text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]`}>
                 {event.prizePool}
               </span>
+              </>
+              }
             </div>
           </div>
         </div>

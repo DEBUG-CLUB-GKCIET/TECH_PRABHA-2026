@@ -10,7 +10,7 @@ export interface EventDetails {
   registrationUrl?: string;
   registrationLinks?: Array<{ label: string; url: string }>;
   color: string;
-  prizePool: string;
+  prizePool?: string;
   image: string;
 }
 
@@ -25,7 +25,6 @@ export const events: EventDetails[] = [
     category: "Ceremony",
     description: "The grand opening ceremony marking the beginning of TECHPRABHA 2026. Join us as we initiate the paradigm and set the stage for relentless innovation.",
     color: "#ff00ff",
-    prizePool: "N/A",
     image: "/eventImages/inauguration.png"
   },
   {
@@ -74,7 +73,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "robo-race-event",
-    title: "Robo Race Event (Parallel Track A)",
+    title: "Robo Race Event",
     date: "29.05.26",
     day: "Friday",
     time: "11:00 AM - 1:00 PM",
@@ -100,7 +99,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "ui-ux-design-competition",
-    title: "UI/UX Design Competition (Parallel Track B)",
+    title: "UI/UX Design Competition",
     date: "29.05.26",
     day: "Friday",
     time: "01:45 PM - 3:00 PM",
@@ -113,7 +112,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "coding-competition",
-    title: "Coding Competition (Parallel Track B)",
+    title: "Coding Competition",
     date: "29.05.26",
     day: "Friday",
     time: "03:15 PM - 05:00 PM",
@@ -126,7 +125,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "innovative-idea-pitching",
-    title: "Innovative Idea Pitching (Parallel Track B)",
+    title: "Innovative Idea Pitching",
     date: "29.05.26",
     day: "Friday",
     time: "03:00 PM - 06:00 PM",
@@ -139,13 +138,13 @@ export const events: EventDetails[] = [
   },
   // Day 2: 30.05.26 (Saturday)
   {
-    slug: "12-hour-hackathon",
-    title: "12-Hour Hackathon",
+    slug: "9-hour-hackathon",
+    title: "9-Hour Hackathon",
     date: "30.05.26",
     day: "Saturday",
     time: "09:00 AM - 06:00 PM",
     category: "Hackathon",
-    description: "A marathon of code, caffeine, and creativity. Build a functional prototype from scratch addressing real-world themes within a grueling 12-hour window.",
+    description: "A marathon of code, caffeine, and creativity. Build a functional prototype from scratch addressing real-world themes within a grueling 9-hour window.",
     registrationUrl: "https://forms.gle/kRg28qsqkiV3hjoL8",
     color: "#ff00ff",
     prizePool: "TBA",
@@ -166,7 +165,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "eggstravacanza",
-    title: "Eggstravacanza (Parallel Track A1)",
+    title: "Eggstravacanza",
     date: "30.05.26",
     day: "Saturday",
     time: "12:15 PM - 02:30 PM",
@@ -179,7 +178,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "bridge-building-competition",
-    title: "Bridge Building Competition (Parallel Track A)",
+    title: "Bridge Building Competition",
     date: "30.05.26",
     day: "Saturday",
     time: "02:30 PM - 04:00 PM",
@@ -192,7 +191,7 @@ export const events: EventDetails[] = [
   },
   {
     slug: "autocad-2d-challenge",
-    title: "AutoCAD 2D Challenge (Parallel Track A)",
+    title: "AutoCAD 2D Challenge",
     date: "30.05.26",
     day: "Saturday",
     time: "04:00 PM - 05:30 PM",
