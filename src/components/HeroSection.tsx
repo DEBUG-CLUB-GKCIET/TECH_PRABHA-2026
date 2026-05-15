@@ -35,7 +35,7 @@ export default function HeroSection() {
   });
 
   return (
-    <section className="relative w-full min-h-[100svh] bg-[#030008] flex items-center justify-center">
+    <section className="relative w-full min-h-[100svh] bg-[#030008] flex items-center justify-center overflow-x-hidden overflow-y-auto">
       {/* Subtle atmospheric gradients */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#7000ff] rounded-full mix-blend-screen filter blur-[200px] opacity-20 pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00f0ff] rounded-full mix-blend-screen filter blur-[200px] opacity-10 pointer-events-none" />
