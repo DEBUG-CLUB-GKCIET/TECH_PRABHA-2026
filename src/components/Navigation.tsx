@@ -97,7 +97,6 @@ const rightNavIcons = [
   { Icon: Mail, href: "mailto:TechPrabha.gkciet@gmail.com"}
 ];
 
-const topNavLinks = ["ACCOMMODATION", "WORKSHOPS", "COMPETITIONS"];
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -105,7 +104,7 @@ export default function Navigation() {
   return (
     <>
       {/* Top Navbar */}
-      <nav className="fixed top-0 left-0 right-0 h-20 z-50 flex items-center justify-between px-6 bg-gradient-to-b from-[#030008] to-transparent pointer-events-none transition-all">
+      <nav className="fixed top-0 left-0 right-0 h-20 z-50 w-screen flex items-center justify-between px-6 bg-gradient-to-b from-[#030008] to-transparent pointer-events-none transition-all">
         <div className="flex flex-row items-center gap-6 pointer-events-auto">
           {/* Replaced T-26 text with logos */}
           <Image src="/gkciet1.png" alt="GKCIET Logo" width={48} height={48} loading="eager" className="h-10 md:h-12 w-auto object-contain" />
