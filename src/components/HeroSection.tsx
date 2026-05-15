@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Space_Grotesk, Inter, Yatra_One } from "next/font/google";
-import { Suspense, useState } from "react";
+import { useState, useEffect } from "react";
 import Countdown from "@/components/Countdown";
 
 // Disable SSR for the 3D Canvas and load it only on capable clients
@@ -21,18 +21,19 @@ const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500"] });
 const yatraOne = Yatra_One({ subsets: ["latin"], weight: "400" });
 
 export default function HeroSection() {
-  const [canRenderCanvas] = useState(() => {
-    if (typeof document === "undefined") return false;
+  const [canRenderCanvas, setCanRenderCanvas] = useState(false);
 
+  useEffect(() => {
     try {
       const canvas = document.createElement("canvas");
-      return Boolean(
+      const hasWebGL = Boolean(
         canvas.getContext("webgl") || canvas.getContext("experimental-webgl")
       );
+      setCanRenderCanvas(hasWebGL);
     } catch {
-      return false;
+      setCanRenderCanvas(false);
     }
-  });
+  }, []);
 
   return (
     <section className="relative w-full min-h-[100svh] bg-[#030008] flex items-center justify-center">
@@ -43,9 +44,7 @@ export default function HeroSection() {
       {/* 3D Canvas Background */}
       {canRenderCanvas && (
         <div className="absolute inset-0 z-0">
-          <Suspense fallback={null}>
-            <SynthCanvas />
-          </Suspense>
+          <SynthCanvas />
         </div>
       )}
 

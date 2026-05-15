@@ -108,7 +108,7 @@ export default function Navigation() {
       <nav className="fixed top-0 left-0 right-0 h-20 z-50 flex items-center justify-between px-6 bg-gradient-to-b from-[#030008] to-transparent pointer-events-none transition-all">
         <div className="flex flex-row items-center gap-6 pointer-events-auto">
           {/* Replaced T-26 text with logos */}
-          <Image src="/gkciet1.png" alt="GKCIET Logo" width={48} height={48} className="h-10 md:h-12 w-auto object-contain" />
+          <Image src="/gkciet1.png" alt="GKCIET Logo" width={48} height={48} loading="eager" className="h-10 md:h-12 w-auto object-contain" />
           <Image src="/techprabha.png" alt="Techprabha Logo" width={48} height={48} className="h-10 md:h-12 w-10 md:w-12 object-contain scale-125" />
         </div>
 
@@ -175,7 +175,7 @@ export default function Navigation() {
           >
             <div className="flex justify-between items-center mb-12">
               <div className="flex flex-row items-center gap-4">
-                <Image src="/gkciet1.png" alt="GKCIET Logo" width={32} height={32} className="h-8 w-auto object-contain" />
+                <Image src="/gkciet1.png" alt="GKCIET Logo" width={32} height={32} loading="eager" className="h-8 w-auto object-contain" />
                 <Image src="/techprabha.png" alt="Techprabha Logo" width={32} height={32} className="h-8 w-8 object-contain scale-125" />
               </div>
               <Code
