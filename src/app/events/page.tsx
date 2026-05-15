@@ -35,10 +35,10 @@ export default function EventsPage() {
           ))}
         </div>
 
-        {/* 4-Column Grid Layout */}
+        {/* 3-Column Grid Layout */}
         <motion.div 
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 w-full"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full"
         >
           <AnimatePresence>
             {filteredEvents.map((event) => (

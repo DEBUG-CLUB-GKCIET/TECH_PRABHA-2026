@@ -56,7 +56,7 @@ export default function SciFiEventCard({ event, onRegisterClick }: Props) {
               <Link
                 href={`/events/${event.slug}`}
                 className={`${syncopate.className} flex-1 inline-flex items-center justify-center w-full bg-[#0a101f] border-2 text-white text-[10px] md:text-xs font-bold py-2 transition-all duration-300 uppercase tracking-widest shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:bg-white hover:text-black group-hover:shadow-[0_0_20px_currentColor]`}
-                style={{ borderColor: event.color, color: 'inherit' }}
+                style={{ borderColor: event.color }}
               >
                 Explore and Register
               </Link>

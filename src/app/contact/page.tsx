@@ -8,6 +8,7 @@ const teamData = [
       {
         name: "AKASH PATTANAYAK",
         role: "LEAD ORGANISER",
+        dept: "ME, 2nd Year",
         email: "243550110194@gkciet.ac.in",
         phone: "+91 7980101528",
         image: "/profileImages/akash.png"
@@ -15,8 +16,9 @@ const teamData = [
       {
         name: "DIPAM PANDIT",
         role: "LEAD ORGANISER",
-        email: "CSE, 2nd Year",
-        phone: "dipam@techprabha.in",
+        dept: "CSE, 2nd Year",
+        email: "dipam@techprabha.in",
+        phone: "+91 8837454482",
         image: "/profileImages/dipam.png"
       }
     ]
@@ -27,40 +29,58 @@ const teamData = [
       {
         name: "DIPAM PANDIT",
         role: "CORE RESPONSIBILITY",
-        email: "CSE, 2nd Year",
-        phone: "dipam.f@techprabha.in",
+        dept: "CSE, 2nd Year",
+        email: "dipam.f@techprabha.in",
+        phone: "+91 8837454482",
         image: "/profileImages/dipam.png"
       },
       {
         name: "MUKTADI HASSAN",
         role: "CORE RESPONSIBILITY",
-        email: "CSE, 2nd Year",
-        phone: "muktadi@techprabha.in",
+        dept: "CSE, 2nd Year",
+        email: "muktadi@techprabha.in",
+        phone: "+91 9734177355",
         image: "/profileImages/MuktadiHassan.png"
       },
       {
         name: "SANKALPA GHOSWAMI",
         role: "CORE RESPONSIBILITY",
-        email: "FET, 2nd Year",
-        phone: "sankalpa@techprabha.in",
-        image: "/profileImages/nodp.png"
-      },
-      {
-        name: "SHABA KHATOON",
-        role: "CORE RESPONSIBILITY",
-        email: "CSE, 2nd Year",
-        phone: "shaba@techprabha.in",
+        dept: "FET, 2nd Year",
+        email: "sankalpa@techprabha.in",
+        phone: "+91 ",
         image: "/profileImages/nodp.png"
       },
       {
         name: "VICKY KUMAR SHAH",
         role: "CORE RESPONSIBILITY",
-        email: "CSE, 2nd Year",
-        phone: "vicky@techprabha.in",
+        dept: "CSE, 2nd Year",
+        email: "vicky@techprabha.in",
+        phone: "+91 87093 46468",
         image: "/profileImages/vickyshah.png"
       }
-    ]
-  }
+    ],
+  },
+  {
+    category: "WEBSITE TEAM",
+    members: [
+      {
+        name: "SOURANGSHU GHOSH",
+        role: "CORE RESPONSIBILITY",
+        dept: "EE, 2nd Year",
+        email: "sourangshu098@gmail.com",
+        phone: "+91 9123805272",
+        image: "/profileImages/sourangshudp.png"
+      },
+      {
+        name: "AMIT DAS ADHIKARI",
+        role: "CORE RESPONSIBILITY",
+        dept: "CSE, 2nd Year",
+        email: "maken.dasadh@gmail.com",
+        phone: "+91 9433800470",
+        image: "/profileImages/amitdp1.png"
+      }
+    ],
+  },
 ];
 
 export default function ContactPage() {
@@ -104,6 +124,7 @@ export default function ContactPage() {
 
                     {/* Contact Bottom Box */}
                     <div className="w-[90%] border border-[#7000ff]/60 bg-black/60 backdrop-blur-md py-3 px-2 text-center rounded-sm relative group-hover:border-[#00f0ff]/80 transition-colors">
+                      <p className="text-xs text-gray-300 mb-1">{member.dept}</p>
                       <p className="text-xs text-gray-300 mb-1">{member.email}</p>
                       <p className="text-xs text-gray-300">{member.phone}</p>
                       

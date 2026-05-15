@@ -9,7 +9,7 @@ export default function SynthGrid() {
       <fog attach="fog" args={["#030008", 5, 20]} />
 
       <Sparkles
-        count={800}
+        count={500}
         scale={15}
         size={2}
         speed={0.4}
@@ -17,7 +17,7 @@ export default function SynthGrid() {
         opacity={0.3}
       />
       <Stars
-        radius={100}
+        radius={50}
         depth={50}
         count={5000}
         factor={4}

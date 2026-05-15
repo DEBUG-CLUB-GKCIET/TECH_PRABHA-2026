@@ -8,6 +8,7 @@ import {
   Gem,
   ShoppingCart,
   Code,
+  Mail
 } from "lucide-react";
 import { Space_Grotesk, Inter, Syncopate, Chakra_Petch } from "next/font/google";
 import type { SVGProps } from "react";
@@ -93,6 +94,7 @@ const YoutubeIcon = ({ size, className, ...props }: IconProps) => (
 
 const rightNavIcons = [
   { Icon: InstagramIcon, href: "https://www.instagram.com/techprabha.gkciet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
+  { Icon: Mail, href: "mailto:TechPrabha.gkciet@gmail.com"}
 ];
 
 const topNavLinks = ["ACCOMMODATION", "WORKSHOPS", "COMPETITIONS"];

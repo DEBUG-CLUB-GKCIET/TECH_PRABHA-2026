@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Space_Grotesk, Inter, Yatra_One } from "next/font/google";
 import { Suspense, useState } from "react";
+import Countdown from "@/components/Countdown";
 
 // Disable SSR for the 3D Canvas and load it only on capable clients
 const SynthCanvas = dynamic(() => import("./SynthCanvas"), {
@@ -34,7 +35,7 @@ export default function HeroSection() {
   });
 
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden bg-[#030008] flex items-center justify-center">
+    <section className="relative w-full min-h-[100svh] bg-[#030008] flex items-center justify-center">
       {/* Subtle atmospheric gradients */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#7000ff] rounded-full mix-blend-screen filter blur-[200px] opacity-20 pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#00f0ff] rounded-full mix-blend-screen filter blur-[200px] opacity-10 pointer-events-none" />
@@ -49,7 +50,7 @@ export default function HeroSection() {
       )}
 
       {/* Glass UI Foreground */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8 w-full max-w-6xl mx-auto pointer-events-none">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8 w-full max-w-6xl mx-auto pointer-events-none h-full">
         {/* Sci-Fi HUD Badge */}
         <motion.div
           className="relative mb-6 mt-16 md:mt-24 group flex items-center justify-center cursor-default"
@@ -108,14 +109,17 @@ export default function HeroSection() {
           <p
             className={`${inter.className} mt-8 text-sm md:text-xl lg:text-2xl text-gray-400 font-light tracking-[0.3em] md:tracking-[0.5em] uppercase text-center max-w-2xl`}
           >
-            A Simulated{" "}
-            <span className="text-[#00f0ff] font-semibold drop-shadow-[0_0_10px_rgba(0,240,255,0.6)]">Paradigm</span>
+            GKCIET's {""}
+            <span className="text-[#00f0ff] font-semibold drop-shadow-[0_0_10px_rgba(0,240,255,0.6)]">TechFest</span>
           </p>
+        </motion.div>
+        <motion.div>
+          <Countdown />
         </motion.div>
 
         {/* Dates - Glass Card */}
         <motion.div
-          className="mt-12 flex flex-col sm:flex-row gap-4 md:gap-8 justify-center"
+          className="mt-6 flex flex-col sm:flex-row gap-4 md:gap-8 justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -124,7 +128,7 @@ export default function HeroSection() {
             <span
               className={`${spaceGrotesk.className} block text-white text-lg md:text-2xl font-bold`}
             >
-              May 29 - 31
+              May 29 - 30
             </span>
             <span
               className={`${inter.className} text-xs md:text-sm text-gray-400 tracking-wider uppercase`}
@@ -136,7 +140,7 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <motion.div
-          className="mt-12 pointer-events-auto"
+          className="mt-8 pointer-events-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
