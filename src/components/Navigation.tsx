@@ -92,9 +92,18 @@ const YoutubeIcon = ({ size, className, ...props }: IconProps) => (
   </svg>
 );
 
+const MobileIcon = ({ size, className, ...props }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className={className} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+    <line x1="12" y1="18" x2="12.01" y2="18" />
+  </svg>
+);
+
 const rightNavIcons = [
-  { Icon: InstagramIcon, href: "https://www.instagram.com/techprabha.gkciet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
-  { Icon: Mail, href: "mailto:TechPrabha.gkciet@gmail.com"}
+  { Icon: InstagramIcon, href: "https://www.instagram.com/techprabha.gkciet" , target: "blank" },
+  { Icon: Mail, href: "mailto:techprabha.gkciet@gmail.com" , target: ""},
+  { Icon: LinkedinIcon, href: "https://www.linkedin.com/in/techprabha-gkciet/" , target: "blank"},
+  { Icon: MobileIcon, href: "tel:+918837454482" , target: ""}
 ];
 
 
@@ -145,18 +154,21 @@ export default function Navigation() {
         ))}
       </aside>
 
-      {/* Right Sidebar */}
-      <aside className="fixed right-0 top-1/2 -translate-y-1/2 w-16 z-40 hidden lg:flex flex-col items-center gap-7 py-8 bg-[#0B0914]/60 backdrop-blur-md rounded-l-2xl pointer-events-auto border-l border-white/5 shadow-2xl">
+      {/* Right Sidebar (Desktop) / Bottom Bar (Mobile) */}
+      <aside className="fixed z-40 flex pointer-events-auto bg-[#0B0914]/80 backdrop-blur-xl shadow-2xl border-white/10 
+        bottom-0 left-1/8 w-3/4 flex-row justify-center gap-8 py-4 border-t rounded-t-3xl translate-y-0
+        lg:right-0 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 lg:left-auto lg:w-16 lg:flex-col lg:gap-7 lg:py-8 lg:border-t-0 lg:border-l lg:rounded-t-none lg:rounded-l-2xl"
+      >
         {rightNavIcons.map((item, index) => (
           <a
             key={index}
             href={item.href}
-            target="_blank"
-            className="group flex flex-col items-center justify-center w-full py-2 hover:bg-white/[0.03] transition-all duration-300"
+            target={item.target}
+            className="group flex flex-col items-center justify-center p-2 lg:p-0 lg:w-full lg:py-2 hover:bg-white/[0.1] lg:hover:bg-white/[0.03] rounded-xl lg:rounded-none transition-all duration-300"
           >
             <item.Icon
               size={22}
-              className="text-white/70 group-hover:text-white group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300"
+              className="text-white/70 group-hover:text-white group-hover:scale-110 lg:group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300"
             />
           </a>
         ))}
