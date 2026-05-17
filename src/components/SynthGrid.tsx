@@ -17,9 +17,9 @@ export default function SynthGrid() {
         opacity={0.3}
       />
       <Stars
-        radius={50}
+        radius={5000}
         depth={50}
-        count={5000}
+        count={50}
         factor={4}
         saturation={0}
         fade

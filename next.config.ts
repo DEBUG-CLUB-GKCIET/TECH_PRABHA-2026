@@ -4,8 +4,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "i.pravatar.cc" },
-      { protocol: "https", hostname: "picsum.photos" },
+      { protocol: 'https', hostname: 'res.cloudinary.com',  port: '', pathname: '/**'},
     ],
   },
   allowedDevOrigins: ['10.17.237.11'],
